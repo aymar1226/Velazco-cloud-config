@@ -32,3 +32,8 @@ logging:
 
 media:
   location: mediafiles
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
