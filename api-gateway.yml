@@ -5,7 +5,7 @@ spring:
         - id: app-service
           uri: lb://APP-SERVICE
           predicates:
-            - Path=/api/**
+            - Path=/api/productos/**
 
 logging:
   level:
