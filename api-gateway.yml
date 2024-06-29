@@ -6,3 +6,8 @@ spring:
           uri: lb://APP-SERVICE
           predicates:
             - Path=/api/**
+
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    reactor.netty: DEBUG
