@@ -1,16 +1,1 @@
-server:
-  port: 3000
-  
-spring:
-  cloud:
-    gateway:
-      routes:
-        - id: app-service
-          uri: lb://APP-SERVICE
-          predicates:
-            - Path=/api/productos/**
 
-logging:
-  level:
-    org.springframework.cloud.gateway: DEBUG
-    reactor.netty: DEBUG
