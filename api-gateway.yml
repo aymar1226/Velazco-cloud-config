@@ -1,1 +1,20 @@
+server:
+  port: 3000
 
+spring:
+  application:
+    name: api-gateway
+  config:
+    import: optional:configserver:http://localhost:8888
+  cloud:
+    gateway:
+      routes:
+        - id: app-service
+          uri: lb://APP-SERVICE
+          predicates:
+            - Path=/api/productos/**
+
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+    reactor.netty: DEBUG
