@@ -1,0 +1,34 @@
+# Configuracion de SQL Server
+spring:
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=BD_VELAZCO_9ciclo;trustServerCertificate=true
+    username: user1
+    password: 1234
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+  jpa:
+    database-platform: org.hibernate.dialect.SQLServer2012Dialect
+    hibernate:
+      ddl-auto: none
+  main:
+    allow-circular-references: true
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 10MB
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: hexatechutp@gmail.com
+    password: vmjj bbtn eoee plad
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+logging:
+  level:
+    org.hibernate.SQL: debug
+
+media:
+  location: mediafiles
