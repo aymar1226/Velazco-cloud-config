@@ -8,7 +8,7 @@ spring:
         - id: app-service
           uri: lb://APP-SERVICE
           predicates:
-            - Path=/api/**, /login
+            - Path=/api/**, /login, /media/**
       globalcors:
         corsConfigurations:
           '[/**]':
