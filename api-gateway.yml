@@ -9,6 +9,7 @@ spring:
           uri: lb://APP-SERVICE
           predicates:
             - Path=/api/**
+            - Path=/api/**, /login
 
 
 
