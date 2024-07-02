@@ -10,6 +10,17 @@ spring:
           predicates:
             - Path=/api/**
             - Path=/login
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:4200"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+            allowedHeaders: "*"
+            allowCredentials: true
 
 logging:
   level:
